@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - Sulaf.PDF</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="admin-page">
+    <!-- شريط التنقل الجانبي -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <div class="admin-logo">
+                <i class="fas fa-book-open"></i>
+                <span>Sulaf<span class="logo-accent">.PDF</span></span>
+            </div>
+            <div class="admin-user">
+                <div class="user-avatar">
+                    <i class="fas fa-user-crown"></i>
+                </div>
+                <div class="user-info">
+                    <h4 class="user-name">Adlep X</h4>
+                    <p class="user-role">مدير النظام</p>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            
+            <a href="#books" class="nav-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الروايات</span>
+                <span class="nav-badge">128</span>
+            </a>
+            
+            <a href="#users" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>المستخدمين</span>
+                <span class="nav-badge">2.4K</span>
+            </a>
+            
+            <a href="#categories" class="nav-item">
+                <i class="fas fa-tags"></i>
+                <span>التصنيفات</span>
+            </a>
+            
+            <a href="#ai-tools" class="nav-item">
+                <i class="fas fa-robot"></i>
+                <span>أدوات الذكاء الاصطناعي</span>
+            </a>
+            
+            <a href="#reports" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>التقارير والإحصائيات</span>
+            </a>
+            
+            <a href="#settings" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+            
+            <div class="nav-divider"></div>
+            
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-external-link-alt"></i>
+                <span>العودة للموقع</span>
+            </a>
+            
+            <a href="#logout" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>تسجيل الخروج</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <p>تم التطوير بواسطة</p>
+            <p class="developer">Adlep X</p>
+            <p><i class="fab fa-instagram"></i> @xlb_me</p>
+        </div>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="admin-main">
+        <!-- شريط التنقل العلوي -->
+        <header class="admin-header">
+            <div class="header-left">
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">لوحة التحكم</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="admin-search">
+                    <input type="text" placeholder="بحث في لوحة التحكم...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="admin-notifications">
+                    <button class="notifications-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </button>
+                </div>
+                
+                <div class="admin-theme-toggle">
+                    <button id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- محتوى لوحة التحكم -->
+        <div class="admin-content">
+            <!-- إحصائيات سريعة -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon primary">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">128</h3>
+                        <p class="stat-title">الروايات</p>
+                    </div>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12%</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">2,458</h3>
+                        <p class="stat-title">المستخدمين</p>
+                    </div>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>24%</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon warning">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">15,892</h3>
+                        <p class="stat-title">التحميلات</p>
+                    </div>
+                    <div class="stat-trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8%</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon danger">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">42</h3>
+                        <p class="stat-title">روايات جديدة</p>
+                    </div>
+                    <div class="stat-trend down">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>5%</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم إدارة الروايات -->
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2 class="section-title">إدارة الروايات</h2>
+                    <div class="section-actions">
+                        <button class="btn-primary" id="add-book">
+                            <i class="fas fa-plus"></i> إضافة رواية
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-filter"></i> تصفية
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="books-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>الرواية</th>
+                                <th>المؤلف</th>
+                                <th>النوع</th>
+                                <th>التحميلات</th>
+                                <th>التقييم</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="book-cell">
+                                    <div class="book-avatar">
+                                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="الرواية">
+                                    </div>
+                                    <div class="book-details">
+                                        <h4>أسطورة الأطلال</h4>
+                                        <p>فانتازيا, مغامرة</p>
+                                    </div>
+                                </td>
+                                <td>أحمد الخيالي</td>
+                                <td><span class="badge badge-pdf">PDF</span></td>
+                                <td>2,415</td>
+                                <td>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </td>
+                                <td><span class="status active">نشط</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn edit" title="تعديل">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="action-btn view" title="عرض">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2</td>
+                                <td class="book-cell">
+                                    <div class="book-avatar">
+                                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="الرواية">
+                                    </div>
+                                    <div class="book-details">
+                                        <h4>عوالم الظل</h4>
+                                        <p>فانتازيا, رعب</p>
+                                    </div>
+                                </td>
+                                <td>سارة الأحلام</td>
+                                <td><span class="badge badge-text">نص</span></td>
+                                <td>1,842</td>
+                                <td>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>4.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status active">نشط</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn edit" title="تعديل">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="action-btn view" title="عرض">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>3</td>
+                                <td class="book-cell">
+                                    <div class="book-avatar">
+                                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="الرواية">
+                                    </div>
+                                    <div class="book-details">
+                                        <h4>صراع العروش الساحرة</h4>
+                                        <p>فانتازيا, سياسية</p>
+                                    </div>
+                                </td>
+                                <td>خالد الساحر</td>
+                                <td><span class="badge badge-pdf">PDF</span></td>
+                                <td>3,127</td>
+                                <td>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status pending">قيد المراجعة</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn edit" title="تعديل">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="action-btn approve" title="موافقة">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>4</td>
+                                <td class="book-cell">
+                                    <div class="book-avatar">
+                                        <img src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="الرواية">
+                                    </div>
+                                    <div class="book-details">
+                                        <h4>مملكة الكائنات الأسطورية</h4>
+                                        <p>فانتازيا, مغامرة</p>
+                                    </div>
+                                </td>
+                                <td>ليلى الخيال</td>
+                                <td><span class="badge badge-pdf">PDF</span></td>
+                                <td>2,215</td>
+                                <td>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </td>
+                                <td><span class="status active">نشط</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn edit" title="تعديل">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="action-btn delete" title="حذف">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button class="action-btn view" title="عرض">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-footer">
+                    <div class="pagination">
+                        <button class="page-btn disabled"><i class="fas fa-chevron-right"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                    </div>
+                    <p>عرض 1-4 من 128 رواية</p>
+                </div>
+            </section>
+            
+            <!-- قسم إدارة المستخدمين -->
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2 class="section-title">أحدث المستخدمين</h2>
+                    <a href="#all-users" class="view-all">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                </div>
+                
+                <div class="users-grid">
+                    <div class="user-card">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="المستخدم">
+                        </div>
+                        <div class="user-info">
+                            <h4 class="user-name">محمد أحمد</h4>
+                            <p class="user-email">mohamed@email.com</p>
+                            <div class="user-stats">
+                                <span><i class="fas fa-book"></i> 5 روايات</span>
+                                <span><i class="fas fa-download"></i> 42 تحميل</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="btn-small primary">تفاصيل</button>
+                        </div>
+                    </div>
+                    
+                    <div class="user-card">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="المستخدم">
+                        </div>
+                        <div class="user-info">
+                            <h4 class="user-name">سارة محمد</h4>
+                            <p class="user-email">sara@email.com</p>
+                            <div class="user-stats">
+                                <span><i class="fas fa-book"></i> 12 رواية</span>
+                                <span><i class="fas fa-download"></i> 87 تحميل</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="btn-small primary">تفاصيل</button>
+                        </div>
+                    </div>
+                    
+                    <div class="user-card">
+                        <div class="user-avatar">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <h4 class="user-name">أحمد خالد</h4>
+                            <p class="user-email">ahmed@email.com</p>
+                            <div class="user-stats">
+                                <span><i class="fas fa-book"></i> 3 روايات</span>
+                                <span><i class="fas fa-download"></i> 18 تحميل</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="btn-small primary">تفاصيل</button>
+                        </div>
+                    </div>
+                    
+                    <div class="user-card">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="المستخدم">
+                        </div>
+                        <div class="user-info">
+                            <h4 class="user-name">فاطمة علي</h4>
+                            <p class="user-email">fatima@email.com</p>
+                            <div class="user-stats">
+                                <span><i class="fas fa-book"></i> 8 روايات</span>
+                                <span><i class="fas fa-download"></i> 54 تحميل</span>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="btn-small primary">تفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم إحصائيات الذكاء الاصطناعي -->
+            <section class="admin-section">
+                <div class="section-header">
+                    <h2 class="section-title">إحصائيات الذكاء الاصطناعي</h2>
+                </div>
+                
+                <div class="ai-stats">
+                    <div class="ai-stat-card">
+                        <div class="ai-stat-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="ai-stat-info">
+                            <h3>245</h3>
+                            <p>روايات مولدة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-stat-card">
+                        <div class="ai-stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="ai-stat-info">
+                            <h3>1,842</h3>
+                            <p>محادثات مع الذكاء الاصطناعي</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-stat-card">
+                        <div class="ai-stat-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="ai-stat-info">
+                            <h3>512</h3>
+                            <p>أفكار روايات مقترحة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-stat-card">
+                        <div class="ai-stat-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="ai-stat-info">
+                            <h3>3,124</h3>
+                            <p>أسئلة تمت الإجابة عليها</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- نافذة إضافة رواية -->
+    <div class="admin-modal" id="add-book-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3><i class="fas fa-plus"></i> إضافة رواية جديدة</h3>
+                <button class="close-admin-modal">&times;</button>
+            </div>
+            <div class="admin-modal-body">
+                <form id="admin-book-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="admin-book-title">عنوان الرواية</label>
+                            <input type="text" id="admin-book-title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-book-author">المؤلف</label>
+                            <input type="text" id="admin-book-author" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="admin-book-description">وصف الرواية</label>
+                        <textarea id="admin-book-description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="admin-book-category">التصنيف</label>
+                            <select id="admin-book-category">
+                                <option value="fantasy">فانتازيا</option>
+                                <option value="adventure">مغامرة</option>
+                                <option value="horror">رعب</option>
+                                <option value="romance">رومانسية</option>
+                                <option value="mystery">غموض</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-book-type">نوع الملف</label>
+                            <select id="admin-book-type">
+                                <option value="pdf">PDF</option>
+                                <option value="text">نص</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-book-status">الحالة</label>
+                            <select id="admin-book-status">
+                                <option value="active">نشط</option>
+                                <option value="pending">قيد المراجعة</option>
+                                <option value="draft">مسودة</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="admin-book-file">رفع ملف الرواية</label>
+                        <div class="file-upload">
+                            <input type="file" id="admin-book-file">
+                            <label for="admin-book-file" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>اختر ملف الرواية</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="admin-book-cover">صورة الغلاف</label>
+                        <div class="file-upload">
+                            <input type="file" id="admin-book-cover" accept="image/*">
+                            <label for="admin-book-cover" class="file-upload-label">
+                                <i class="fas fa-image"></i>
+                                <span>اختر صورة الغلاف</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">حفظ الرواية</button>
+                        <button type="button" class="btn-secondary close-admin-modal">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الإشعارات -->
+    <div class="notifications-modal" id="notifications-modal">
+        <div class="notifications-content">
+            <div class="notifications-header">
+                <h3>الإشعارات</h3>
+                <button class="close-notifications">&times;</button>
+            </div>
+            <div class="notifications-list">
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>مستخدم جديد قام بالتسجيل: أحمد محمد</p>
+                        <span class="notification-time">منذ 5 دقائق</span>
+                    </div>
+                </div>
+                
+                <div class="notification-item unread">
+                    <div class="notification-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>رواية جديدة تحتاج المراجعة: "أسرار العالم السفلي"</p>
+                        <span class="notification-time">منذ ساعة</span>
+                    </div>
+                </div>
+                
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>وصل عدد التحميلات إلى 15,000 هذا الشهر</p>
+                        <span class="notification-time">منذ يومين</span>
+                    </div>
+                </div>
+                
+                <div class="notification-item">
+                    <div class="notification-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="notification-content">
+                        <p>الذكاء الاصطناعي قام بإنشاء 15 رواية هذا الأسبوع</p>
+                        <span class="notification-time">منذ 3 أيام</span>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-footer">
+                <a href="#all-notifications">عرض جميع الإشعارات</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
