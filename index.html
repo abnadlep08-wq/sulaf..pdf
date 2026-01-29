@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaf.PDF - منصة روايات الفانتازيا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-book-open"></i>
+                    <span>Sulaf<span class="logo-accent">.PDF</span></span>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="ابحث عن رواية فانتازيا...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="nav-links">
+                <a href="login.html" class="login-btn" id="user-account">
+                    <i class="fas fa-user"></i>
+                    <span>تسجيل الدخول</span>
+                </a>
+                <a href="#upload" class="upload-btn">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>نشر رواية</span>
+                </a>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- شريط التنقل السفلي للجوال -->
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#search" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>البحث</span>
+        </a>
+        <a href="#ai" class="nav-item">
+            <i class="fas fa-robot"></i>
+            <span>الذكاء الاصطناعي</span>
+        </a>
+        <a href="#library" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>مكتبتي</span>
+        </a>
+        <a href="#account" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>حسابي</span>
+        </a>
+    </div>
+
+    <!-- محتوى الصفحة الرئيسية -->
+    <main class="main-content">
+        <!-- قسم الترحيب -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">عالم <span class="highlight">الفانتازيا</span> بين يديك</h1>
+                <p class="hero-subtitle">أكبر مكتبة عربية لروايات الفانتازيا - حمل أو اقرأ مباشرة</p>
+                <div class="hero-btns">
+                    <a href="#featured" class="btn-primary">استكشف المكتبة</a>
+                    <a href="login.html" class="btn-secondary">انضم إلينا</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="قارئ">
+            </div>
+        </section>
+
+        <!-- قسم الروايات المميزة -->
+        <section class="featured-section" id="featured">
+            <div class="section-header">
+                <h2 class="section-title">روايات فانتازيا مميزة</h2>
+                <a href="#all-books" class="view-all">عرض الكل <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="books-grid">
+                <!-- الرواية 1 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="غطاء رواية">
+                        <div class="book-badge">الأكثر تحميلاً</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">أسطورة الأطلال</h3>
+                        <p class="book-author">أحمد الخيالي</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-download"></i> 2.4K</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-btn read-btn"><i class="fas fa-book-open"></i> قراءة</button>
+                            <button class="action-btn download-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الرواية 2 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="غطاء رواية">
+                        <div class="book-badge">جديد</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">عوالم الظل</h3>
+                        <p class="book-author">سارة الأحلام</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-download"></i> 1.8K</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-file-alt"></i> نص</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-btn read-btn"><i class="fas fa-book-open"></i> قراءة</button>
+                            <button class="action-btn download-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الرواية 3 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="غطاء رواية">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">صراع العروش الساحرة</h3>
+                        <p class="book-author">خالد الساحر</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-download"></i> 3.1K</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-btn read-btn"><i class="fas fa-book-open"></i> قراءة</button>
+                            <button class="action-btn download-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الرواية 4 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="غطاء رواية">
+                        <div class="book-badge">مميز</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">مملكة الكائنات الأسطورية</h3>
+                        <p class="book-author">ليلى الخيال</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-download"></i> 2.2K</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                            <span><i class="fas fa-file-pdf"></i> PDF</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="action-btn read-btn"><i class="fas fa-book-open"></i> قراءة</button>
+                            <button class="action-btn download-btn"><i class="fas fa-download"></i> تحميل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المميزات -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">لماذا Sulaf.PDF؟</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3 class="feature-title">تحميل مجاني</h3>
+                    <p class="feature-desc">حمل روايات الفانتازيا بصيغة PDF أو نص مجاناً</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">ذكاء اصطناعي</h3>
+                    <p class="feature-desc">إنشاء روايات وأسئلة بالذكاء الاصطناعي</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="feature-title">نشر روايات</h3>
+                    <p class="feature-desc">انشر رواياتك الخاصة مع مجتمعنا</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">متعدد المنصات</h3>
+                    <p class="feature-desc">استمتع بالقراءة على جميع أجهزتك</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الذكاء الاصطناعي -->
+        <section class="ai-section" id="ai">
+            <div class="ai-container">
+                <div class="ai-content">
+                    <h2 class="section-title">منتج روايات <span class="highlight">بالذكاء الاصطناعي</span></h2>
+                    <p class="ai-desc">أنشئ روايات فانتازيا فريدة باستخدام أدوات الذكاء الاصطناعي المتقدمة. اكتب فكرة واترك الباقي لنا!</p>
+                    <div class="ai-actions">
+                        <button class="btn-primary" id="generate-story">
+                            <i class="fas fa-magic"></i> إنشاء رواية
+                        </button>
+                        <button class="btn-secondary" id="ask-ai">
+                            <i class="fas fa-question-circle"></i> أسئلة للذكاء الاصطناعي
+                        </button>
+                    </div>
+                </div>
+                <div class="ai-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="الذكاء الاصطناعي">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- نافذة الذكاء الاصطناعي -->
+    <div class="ai-modal" id="ai-modal">
+        <div class="ai-modal-content">
+            <div class="ai-modal-header">
+                <h3><i class="fas fa-robot"></i> مساعد الذكاء الاصطناعي</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="ai-modal-body">
+                <div class="ai-chat">
+                    <div class="ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>مرحباً! أنا مساعدك الذكي لكتابة روايات الفانتازيا. كيف يمكنني مساعدتك اليوم؟</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-input-container">
+                    <input type="text" id="ai-input" placeholder="اكتب سؤالك أو فكرة رواية...">
+                    <button id="send-ai"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="ai-quick-actions">
+                    <button class="quick-action">أنشئ رواية عن فارس وساحرة</button>
+                    <button class="quick-action">اقترح أسماء لعالم خيالي</button>
+                    <button class="quick-action">اكتب مقدمة لرواية فانتازيا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة رفع الرواية -->
+    <div class="upload-modal" id="upload-modal">
+        <div class="upload-modal-content">
+            <div class="upload-modal-header">
+                <h3><i class="fas fa-cloud-upload-alt"></i> نشر رواية جديدة</h3>
+                <button class="close-upload-modal">&times;</button>
+            </div>
+            <div class="upload-modal-body">
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="book-title">عنوان الرواية</label>
+                        <input type="text" id="book-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-author">اسم المؤلف</label>
+                        <input type="text" id="book-author" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-description">وصف الرواية</label>
+                        <textarea id="book-description" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>نوع الملف</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="file-type" value="pdf" checked> PDF
+                            </label>
+                            <label>
+                                <input type="radio" name="file-type" value="text"> نص
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-file">رفع الملف</label>
+                        <input type="file" id="book-file" accept=".pdf,.txt,.docx">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="book-cover">صورة الغلاف</label>
+                        <input type="file" id="book-cover" accept="image/*">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">نشر الرواية</button>
+                        <button type="button" class="btn-secondary close-upload-modal">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-book-open"></i>
+                    <span>Sulaf<span class="logo-accent">.PDF</span></span>
+                </div>
+                <p class="footer-desc">أكبر منصة عربية متخصصة في روايات الفانتازيا - حمل واقرأ وأنشر رواياتك</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/xlb_me" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">روابط سريعة</h4>
+                <a href="#featured" class="footer-link">الروايات المميزة</a>
+                <a href="#ai" class="footer-link">الذكاء الاصطناعي</a>
+                <a href="#upload" class="footer-link">نشر رواية</a>
+                <a href="login.html" class="footer-link">حسابي</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">الدعم</h4>
+                <a href="#" class="footer-link">الأسئلة الشائعة</a>
+                <a href="#" class="footer-link">اتصل بنا</a>
+                <a href="#" class="footer-link">شروط الاستخدام</a>
+                <a href="#" class="footer-link">سياسة الخصوصية</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">المطور</h4>
+                <p>Adlep X</p>
+                <p><i class="fab fa-instagram"></i> @xlb_me</p>
+                <p>تم التطوير بحب لقراء الفانتازيا</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 Sulaf.PDF - تصميم وتطوير Adlep X</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
